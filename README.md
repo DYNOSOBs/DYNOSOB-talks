@@ -3,9 +3,7 @@ A repository that contains presentation slides and posters of the group.
 
 Each member has a corresponding folder named after their initials.
 
-## How to:
-
-### 1. clone the repository
+## How to clone the repository
 
 To clone the repository to your computer you need to open a terminal, navigate
 to the location you want to the project, and run the following command:
@@ -16,7 +14,7 @@ git clone git@github.com:DYNOSOBs/DYNOSOB-talks.git
 
 You can also download the project using the download button on the top right corner.
 
-### 2. include slides/poster
+## How to include slides/poster
 
 To include your presentation slides/poster create a folder in your folder and
 use the convention `Type-YY-MM-DD-short-title`, for example
@@ -26,7 +24,7 @@ and `PST` for poster.
 In the folder include at least the `pdf` of the slides/poster.
 Ideally, include all the files necessary to compile the document.
 
-### update the repository using git
+## How to update the repository using git
 
 Before you start working make sure your copy is up to date. Command:
 

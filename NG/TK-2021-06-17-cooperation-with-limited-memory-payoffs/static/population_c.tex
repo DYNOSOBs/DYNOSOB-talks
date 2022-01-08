@@ -1,0 +1,68 @@
+\documentclass{standalone}
+
+\begin{document}
+\tikzset{man/.pic={
+    \node[circle,fill,minimum size=5mm] (head) {};
+    \node[rounded corners=2pt,minimum height=.8cm,minimum width=0.4cm,fill,below = 1pt of head] (body) {};
+    \draw[line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body.north east) --++(-90:6mm);
+    \draw[line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body.north west)--++(-90:6mm);
+    }}
+\begin{tikzpicture}
+    \pic[orange] at (0, 0) (myman) {man};
+    \pic[orange] at (1, 0) (myman) {man};
+    \pic[orange] at (2, 0) (myman) {man};
+    \pic[orange] at (3, 0) (myman) {man};
+    \pic[orange] at (4, 0) (myman) {man};
+    \pic[orange] at (5, 0) (myman) {man};
+    \pic[orange] at (6, 0) (myman) {man};
+    \pic[orange] at (7, 0) (myman) {man};
+    \pic[orange] at (8, 0) (myman) {man};
+    \pic[orange] at (9, 0) (myman) {man};
+
+    \pic[orange] at (0, 2) (myman) {man};
+    \pic[orange] at (1, 2) (myman) {man};
+    \pic[orange] at (2, 2) (myman) {man};
+    \pic[orange] at (3, 2) (myman) {man};
+    \pic[orange] at (4, 2) (myman) {man};
+    \pic[orange] at (5, 2) (myman) {man};
+    \pic[orange] at (6, 2) (myman) {man};
+    \pic[orange] at (7, 2) (myman) {man};
+    \pic[orange] at (8, 2) (myman) {man};
+    \pic[orange] at (9, 2) (myman) {man};
+
+    \pic[orange] at (0, 4) (myman) {man};
+    \pic[orange] at (1, 4) (myman) {man};
+    \pic[orange] at (2, 4) (myman) {man};
+    \pic[orange] at (3, 4) (myman) {man};
+    \pic[orange] at (4, 4) (myman) {man};
+    \pic[orange] at (5, 4) (myman) {man};
+    \pic[orange] at (6, 4) (myman) {man};
+    \pic[orange] at (7, 4) (myman) {man};
+    \pic[orange] at (8, 4) (myman) {man};
+    \pic[orange] at (9, 4) (myman) {man};
+
+    \pic[orange] at (0, 6) (myman) {man};
+    \pic[orange] at (1, 6) (myman) {man};
+    \pic[orange] at (2, 6) (myman) {man};
+    \pic[orange] at (3, 6) (myman) {man};
+    \pic[orange] at (4, 6) (myman) {man};
+    \pic[orange] at (5, 6) (myman) {man};
+    \pic[orange] at (6, 6) (myman) {man};
+    \pic[orange] at (7, 6) (myman) {man};
+    \pic[orange] at (8, 6) (myman) {man};
+    \pic[orange] at (9, 6) (myman) {man};
+
+    \pic[orange] at (0, 8) (myman) {man};
+    \pic[orange] at (1, 8) (myman) {man};
+    \pic[orange] at (2, 8) (myman) {man};
+    \pic[orange] at (3, 8) (myman) {man};
+    \pic[orange] at (4, 8) (myman) {man};
+    \pic[orange] at (5, 8) (myman) {man};
+    \pic[orange] at (6, 8) (myman) {man};
+    \pic[orange] at (7, 8) (myman) {man};
+    \pic[orange] at (8, 8) (myman) {man};
+    \pic[orange] at (9, 8) (myman) {man};
+
+
+\end{tikzpicture}
+\end{document}

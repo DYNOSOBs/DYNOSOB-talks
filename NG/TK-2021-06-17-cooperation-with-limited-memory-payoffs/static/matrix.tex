@@ -1,0 +1,8 @@
+\documentclass{standalone}
+
+\begin{tikzpicture}[element/.style={minimum width=1.75cm,minimum height=0.85cm}]
+    \matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+             & Factor 1  & Factor 2  \\
+    Factor 1 & |[draw]|5 & |[draw]|4 \\
+    Factor 2 & |[draw]|2 & |[draw]|2 \\    };
+\end{tikzpicture}

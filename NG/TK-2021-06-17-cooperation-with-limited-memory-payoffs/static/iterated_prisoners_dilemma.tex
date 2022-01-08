@@ -1,0 +1,22 @@
+\documentclass{standalone}
+
+\usepackage{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+    \begin{tikzpicture}[node distance=1cm]
+    \node (a) {\includestandalone[width=.6\textwidth]{static/DD}};
+    \node[below= 1cm of a] {\huge{\textbf{turn 1}}};
+    \pause
+    \node (b) [below right=of a] {\includestandalone[width=.6\textwidth]{static/CD}};
+    \node[below= 1cm of b] {\huge{\textbf{turn 2}}};
+    \pause
+    \node (c) [below right=of b] {\includestandalone[width=.6\textwidth]{static/CD}};
+    \node[below= 1cm of c] {\huge{\textbf{turn 3}}};
+    \pause
+    \node (d) [below right=of c] {\textbf{\Huge{$\dots$}}};
+    \node (e) [below right=of d] {\includestandalone[width=.6\textwidth]{static/CC}};
+    \node[below= 1cm of e] {\huge{\textbf{turn $n$}}};
+    \end{tikzpicture}
+\end{document}

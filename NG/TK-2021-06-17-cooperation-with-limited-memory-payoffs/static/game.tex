@@ -1,0 +1,21 @@
+\documentclass{standalone}
+
+\begin{document}
+\tikzset{man/.pic={
+    \node[circle,fill,minimum size=5mm] (head) {};
+    \node[rounded corners=2pt,minimum height=.8cm,minimum width=0.4cm,fill,below = 1pt of head] (body) {};
+    \draw[line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body.north east) --++(-90:6mm);
+    \draw[line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body.north west)--++(-90:6mm);
+    }}
+\begin{tikzpicture}
+    \pic[] at (0, 0) (myman) {man};
+    \pic[] at (2, 0) (myman) {man};
+    \pause
+    \node (p) at (.5, .7) {\textcolor{orange}{\footnotesize{Nice?}} \phantom{\textcolor{cyan}{\footnotesize{Not nice?}}}};
+    \pic[orange] at (0, 0) (myman) {man};
+    \pause
+
+    \node (p) at (.5, .7) {\textcolor{orange}{\sout{\footnotesize{Nice?}} }\textcolor{cyan}{\footnotesize{Not nice?}}};
+    \pic[cyan] at (0, 0) (myman) {man};
+\end{tikzpicture}
+\end{document}

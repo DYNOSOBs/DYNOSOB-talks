@@ -1,0 +1,28 @@
+\documentclass{standalone}
+
+\begin{document}
+\tikzset{man/.pic={
+    \node[circle,fill,minimum size=5mm] (head) {};
+    \node[rounded corners=2pt,minimum height=.8cm,minimum width=0.4cm,fill,below = 1pt of head] (body) {};
+    \draw[line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body.north east) --++(-90:6mm);
+    \draw[line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body.north west)--++(-90:6mm);
+    }}
+\begin{tikzpicture}
+
+    \pic[solarizedGreen] at (0, 0) (myman) {man};
+    \node at (1, -.6) (equal) {\LARGE{$=$}};
+    \node at (1.5, -.5) (equal) {\textcolor{solarizedGreen}{\LARGE{$k$}}};
+    \node at (2.5, -.5) (MM) {\includestandalone[width=.1\textwidth]{static/MM}};
+    \node at (3.5, -.5) (equal) {\LARGE{$+$}};
+    \node at (4.9, -.5) (equal) {\textcolor{solarizedRed}{\LARGE{$(N - k)$}}};
+    \node at (6.6, -.5) (MM) {\includestandalone[width=.1\textwidth]{static/MR}};
+
+    \pic[solarizedRed] at (0, -3) (myman) {man};
+    \node at (1, -3.6) (equal) {\LARGE{$=$}};
+    \node at (1.5, -3.5) (equal) {\textcolor{solarizedGreen}{\LARGE{$k$}}};
+    \node at (2.5, -3.5) (MM) {\includestandalone[width=.1\textwidth]{static/RM}};
+    \node at (3.5, -3.5) (equal) {\LARGE{$+$}};
+    \node at (4.9, -3.5) (equal) {\textcolor{solarizedRed}{\LARGE{$(N - k)$}}};
+    \node at (6.6, -3.5) (MM) {\includestandalone[width=.1\textwidth]{static/RR}};
+\end{tikzpicture}
+\end{document}

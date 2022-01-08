@@ -1,0 +1,44 @@
+\documentclass{standalone}
+
+\begin{document}
+\tikzset{man/.pic={
+    \node[circle,fill,minimum size=5mm] (head) {};
+    \node[rounded corners=2pt,minimum height=.8cm,minimum width=0.4cm,fill,below = 1pt of head] (body) {};
+    \draw[line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body.north east) --++(-90:6mm);
+    \draw[line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body.north west)--++(-90:6mm);
+    }}
+\begin{tikzpicture}
+    \node at (1.5, 7) {\textbf{Update Stage}};
+
+    \pic[solarizedRed] at (0, 0) (myman) {man};
+    \pic[solarizedGreen] at (1, 0) (myman) {man};
+    \pic[solarizedRed] at (2, 0) (myman) {man};
+    \pic[solarizedRed] at (3, 0) (myman) {man};
+
+    \pic[solarizedGreen] at (0, 2) (myman) {man};
+    \pic[solarizedRed] at (1, 2) (myman) {man};
+    \pic[solarizedRed] at (2, 2) (myman) {man};
+    \pic[solarizedRed] at (3, 2) (myman) {man};
+
+
+    \pic[solarizedRed] at (0, 4) (myman) {man};
+    \pic[solarizedRed] at (1, 4) (myman) {man};
+    \pic[solarizedGreen] at (2, 4) (myman) {man};
+    \pic[solarizedGreen] at (3, 4) (myman) {man};
+
+    \pic[solarizedGreen] at (0, 6) (myman) {man};
+    \pic[solarizedRed] at (1, 6) (myman) {man};
+    \pic[solarizedGreen] at (2, 6) (myman) {man};
+    \pic[solarizedRed] at (3, 6) (myman) {man};
+
+    \pause
+    \node at (-0.3, 5.5) (a) {};
+    \node at (-0.3, 4) (b) {};
+
+    \draw (a) edge[out=180, in=180, thick, ->] node [] {} (b);
+    \draw (b) edge[out=180, in=180, thick, ->] node [] {} (a);
+
+    \pause
+    \pic[solarizedRed] at (0, 6) (myman) {man};
+\end{tikzpicture}
+\end{document}

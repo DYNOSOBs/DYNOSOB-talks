@@ -1,0 +1,59 @@
+\documentclass{standalone}
+
+\begin{document}
+\tikzset{man/.pic={
+    \node[circle,fill,minimum size=5mm] (head) {};
+    \node[rounded corners=2pt,minimum height=.8cm,minimum width=0.4cm,fill,below = 1pt of head] (body) {};
+    \draw[line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body.north east) --++(-90:6mm);
+    \draw[line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body.north west)--++(-90:6mm);
+    }}
+\begin{tikzpicture}
+
+    \pic[orange] at (2, 0) (myman) {man};
+    \pic[purple] at (3, 0) (myman) {man};
+    \pic[orange] at (4, 0) (myman) {man};
+    \pic[orange] at (2, -2) (myman) {man};
+    \pic[purple] at (3, -2) (myman) {man};
+    \pic[purple] at (4, -2) (myman) {man};
+    \node at (3, -3.7) (a) {\textcolor{solarizedOrange}{\textbf{\tiny{I.}}}};
+
+    \pause
+
+    \coordinate  (A) at (5, -1.5);
+    \coordinate  (B) at (6, -1.5) ;
+    \draw [->, solarizedOrange, ultra thick] (A.north) to [out=0,in=180] (B.north);
+
+
+    \pic[orange] at (7, 0) (myman) {man};
+    \pic[purple] at (8, 0) (myman) {man};
+    \pic[orange] at (9, 0) (myman) {man};
+    \node at (9, -.7) (a) {\textcolor{white}{\tiny{A}}};
+    \pic[orange] at (7, -2) (myman) {man};
+    \pic[purple] at (8, -2) (myman) {man};
+    \pic[purple] at (9, -2) (myman) {man};
+    \node at (9, -2.7) (b) {\textcolor{white}{\tiny{B}}};
+
+    \node at (8, -3.7)  {\textcolor{solarizedOrange}{\textbf{\tiny{II.}}}};
+
+    \pause
+    \coordinate  (a) at (9.5, -.7);
+    \coordinate  (b) at (9.5, -2.7) ;
+    \draw (a) edge[out=0, in=0, thick, ->] node [xshift=.7cm, yshift=1.6cm] {\tiny{$\frac{1}{1\!+\! e^{\!-\!\beta (\pi _{{\rm B}}\!-\!\pi _{{\rm A}})}}$}} (b);
+
+    \pause
+
+    \coordinate  (A) at (10.5, -1.5);
+    \coordinate  (B) at (11.5, -1.5) ;
+    \draw [->, solarizedOrange, ultra thick] (A.north) to [out=0,in=180] (B.north);
+
+    \pic[orange] at (12.5, 0) (myman) {man};
+    \pic[purple] at (13.5, 0) (myman) {man};
+    \pic[purple] at (14.5, 0) (myman) {man};
+    \node at (14.5, -.7) (a) {\textcolor{white}{\tiny{B}}};
+    \pic[orange] at (12.5, -2) (myman) {man};
+    \pic[purple] at (13.5, -2) (myman) {man};
+    \pic[purple] at (14.5, -2) (myman) {man};
+    \node at (14.5, -2.7) (b) {\textcolor{white}{\tiny{B}}};
+    \node at (13.5, -3.7) (a) {\textcolor{solarizedOrange}{\textbf{\tiny{III.}}}};
+\end{tikzpicture}
+\end{document}

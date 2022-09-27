@@ -1,0 +1,16 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}
+    % \node[align=center] (0) at (0, 3) {\textbf{Prisoner's Dilemma}};
+
+    \matrix at (-1, -1) [{matrix of math nodes},left delimiter={(},right delimiter= {)}] (m)
+    {c - b &  -c\\
+    b & 0 \\};
+    \node[align=center] (0) at (5, 1.5) {\textbf{\textcolor{solarizedOrange}{Nash}} \\ \tiny{\textbf{\textcolor{solarizedOrange}{no player wants to deviate}}}};
+    \draw[color=solarizedOrange, ultra thick] (m-2-2.south west) -- (m-2-2.south east);
+    \coordinate  (A) at (1, 1);
+    \coordinate  (B) at (3, 2) ;
+    \draw [->, solarizedOrange, ultra thick] (A.north) to [out=90,in=180] (B.north);
+\end{tikzpicture}
+\end{document}
